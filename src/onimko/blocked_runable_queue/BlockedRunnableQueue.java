@@ -45,6 +45,6 @@ public class BlockedRunnableQueue {
      */
     public synchronized void putTask(Runnable task) {
         tasks.add(task);
-        notifyAll();
+        notify();
     }
 }
