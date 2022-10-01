@@ -47,4 +47,13 @@ public class BlockedRunnableQueue {
         tasks.add(task);
         notify();
     }
+
+    /**
+     * Method returns a string with number of tasks for starts.
+     * @return String - number of tasks.
+     */
+    @Override
+    public String toString() {
+        return tasks.size() + "";
+    }
 }
