@@ -1,4 +1,4 @@
-package onimko;
+package onimko.blocked_runable_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -9,7 +9,7 @@ public class BlockedRunnableQueue {
 
     public BlockedRunnableQueue() {
         new Thread(() -> {
-            while (true) getTask();
+            while (true) new Thread(getTask()).start();
         }).start();
     }
 
